@@ -156,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5958355955647310343, guid: aa3339c7d7a7ae34fbaec666e5414cc3, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5958355955647310343, guid: aa3339c7d7a7ae34fbaec666e5414cc3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -291,7 +291,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1274199214
 PrefabInstance:
@@ -302,7 +302,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5410675641248930195, guid: 2b95143b38036044088573c19a16ae63, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5410675641248930195, guid: 2b95143b38036044088573c19a16ae63, type: 3}
       propertyPath: m_LocalPosition.x
@@ -365,6 +365,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.050000004
       objectReference: {fileID: 0}
+    - target: {fileID: 1140785136, guid: aa3339c7d7a7ae34fbaec666e5414cc3, type: 3}
+      propertyPath: transitionName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5958355955647310340, guid: aa3339c7d7a7ae34fbaec666e5414cc3, type: 3}
       propertyPath: m_Name
       value: Area Exit (1)
@@ -372,6 +376,14 @@ PrefabInstance:
     - target: {fileID: 5958355955647310341, guid: aa3339c7d7a7ae34fbaec666e5414cc3, type: 3}
       propertyPath: areaToLoad
       value: Countryside
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958355955647310341, guid: aa3339c7d7a7ae34fbaec666e5414cc3, type: 3}
+      propertyPath: theEntrance
+      value: 
+      objectReference: {fileID: 1663257527}
+    - target: {fileID: 5958355955647310341, guid: aa3339c7d7a7ae34fbaec666e5414cc3, type: 3}
+      propertyPath: areaTransitionName
+      value: Countryside-2
       objectReference: {fileID: 0}
     - target: {fileID: 5958355955647310343, guid: aa3339c7d7a7ae34fbaec666e5414cc3, type: 3}
       propertyPath: m_RootOrder
@@ -419,6 +431,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa3339c7d7a7ae34fbaec666e5414cc3, type: 3}
+--- !u!114 &1663257527 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1140785136, guid: aa3339c7d7a7ae34fbaec666e5414cc3, type: 3}
+  m_PrefabInstance: {fileID: 1663257526}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a6f693ade44b04c84b53e7fa4ae8b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1820081477179849061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -428,7 +451,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1820081477869004912, guid: 753b3241acc85234eb15e485f78364d9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1820081477869004912, guid: 753b3241acc85234eb15e485f78364d9, type: 3}
       propertyPath: m_LocalPosition.x
