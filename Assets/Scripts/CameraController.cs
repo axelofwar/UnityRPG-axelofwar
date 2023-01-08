@@ -17,6 +17,11 @@ public class CameraController : MonoBehaviour
         cam.orthographicSize = PlayerPrefs.GetFloat("orthographicSize", cam.orthographicSize);
         targetZoom = cam.orthographicSize;
         target = PlayerController.instance.transform; // set the target to the position of the player in this instance
+        
+        if(target == null)
+        {
+            target = PlayerLoader.player.transform;
+        }
     }
 
     // LateUpdate is called once per frame after Update
@@ -24,7 +29,12 @@ public class CameraController : MonoBehaviour
     {
         transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
         // update the transform of the attached object - aka the camera - to the pose of the taget and keep initial height of cam
-       
+        
+        // if(transform.position == null)
+        // {
+        //     transform.position = new Vector3(PlayerLoader.player.transform.position.x, PlayerLoader.player.position.y, PlayerLoader.player.position.z);
+        // }
+        
         // set zoom level based on scroll wheel data
         float scrollData;
         scrollData = Input.GetAxis("Mouse ScrollWheel");

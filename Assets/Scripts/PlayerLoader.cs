@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PlayerLoader : MonoBehaviour
 {
-    public GameObject player; //GameObject not player controller because we want to load the whole prefab if not present
+    public static GameObject player; //GameObject not player controller because we want to load the whole prefab if not present
     // Start is called before the first frame update
     void Start()
     {
         if(PlayerController.instance == null)
         {
-            Instantiate(player);
+            GameObject playerPrefab = Resources.Load("player") as GameObject;
+            player = Instantiate(playerPrefab, transform.position, transform.rotation);
+            PlayerController.instance.transform.position = this.transform.position;
         }
     }
 
