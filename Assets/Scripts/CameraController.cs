@@ -16,12 +16,17 @@ public class CameraController : MonoBehaviour
         cam = Camera.main;
         cam.orthographicSize = PlayerPrefs.GetFloat("orthographicSize", cam.orthographicSize);
         targetZoom = cam.orthographicSize;
-        target = PlayerController.instance.transform; // set the target to the position of the player in this instance
         
-        if(target == null)
+        if(PlayerController.instance == null)
         {
             target = PlayerLoader.player.transform;
         }
+
+        else
+        {
+            target = PlayerController.instance.transform; // set the target to the position of the player in this instance
+        }
+
     }
 
     // LateUpdate is called once per frame after Update
@@ -34,6 +39,7 @@ public class CameraController : MonoBehaviour
         // {
         //     transform.position = new Vector3(PlayerLoader.player.transform.position.x, PlayerLoader.player.position.y, PlayerLoader.player.position.z);
         // }
+
         
         // set zoom level based on scroll wheel data
         float scrollData;

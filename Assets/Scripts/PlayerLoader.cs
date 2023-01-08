@@ -11,8 +11,8 @@ public class PlayerLoader : MonoBehaviour
         if(PlayerController.instance == null)
         {
             GameObject playerPrefab = Resources.Load("player") as GameObject;
-            player = Instantiate(playerPrefab, transform.position, transform.rotation);
-            PlayerController.instance.transform.position = this.transform.position;
+            PlayerLoader.player = Instantiate(playerPrefab, transform.position, transform.rotation);
+            // AreaExit.areaTransitionName = PlayerController.instance.areaTransitionName;
         }
     }
 

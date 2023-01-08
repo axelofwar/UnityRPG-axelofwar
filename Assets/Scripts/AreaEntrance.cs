@@ -8,6 +8,14 @@ public class AreaEntrance : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // if (transitionName == null)
+        // {
+        //     // transitionName = AreaExit.areaTransitionName;
+        //     // transitionName = AreaExit.areaToLoad;
+        //     // transitionName = PlayerController.instance.areaTransitionName;
+        //     // transitionName = AreaExit.areaTransitionName; // we can call this way because its static and there won't be another
+        // }
+
         if (transitionName == PlayerController.instance.areaTransitionName)
         {
             PlayerController.instance.transform.position = transform.position;

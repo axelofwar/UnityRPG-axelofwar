@@ -29,5 +29,11 @@ public class AreaExit : MonoBehaviour
 
             PlayerController.instance.areaTransitionName = areaTransitionName; // we can call this way because its static and there won't be another
         }
+
+        if(other.tag == "PlayerLoader")
+        {
+            SceneManager.LoadScene(areaToLoad);
+            PlayerController.instance.areaTransitionName = areaTransitionName;
+        }
     }
 }
